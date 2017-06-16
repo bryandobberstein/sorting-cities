@@ -11,16 +11,6 @@ public class PopulationComparator implements Comparator<City>{
 
     @Override
     public int compare(City o1, City o2) {
-        if (o1.getPopulation() > o2.getPopulation()){
-            return -1;
-        }
-
-        else if (o1.getPopulation() == o2.getPopulation()){
-            return 0;
-        }
-
-        else{
-            return 1;
-        }
+        return Integer.compare(o1.getPopulation(), o2.getPopulation());
     }
 }
